@@ -41,6 +41,9 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
+ENABLE_CPUSETS := true
+ENABLE_SCHEDBOOST := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
@@ -125,3 +128,8 @@ TW_INCLUDE_FUSE_NTFS := true
 
 # VINTF
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
+
+# PBRP specific build flags
+PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
+PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
